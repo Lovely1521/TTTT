@@ -161,7 +161,7 @@ return ParticlePool;
 /*
 * Putting it all together
 */
-(function(canvas) {
+(ducaction(canvas) {
 var context = canvas.getContext('2d'),
 particles = new ParticlePool(settings.particles.length),
 particleRate = settings.particles.length / settings.particles.duration, // particles/sec
@@ -198,7 +198,7 @@ context.lineTo(point.x, point.y);
 }
 context.closePath();
 // create the fill
-context.fillStyle = '#ea80b0';
+context.fillStyle = '#ea97b0';
 context.fill();
 // create the image
 var image = new Image();
@@ -211,7 +211,7 @@ function render() {
 requestAnimationFrame(render);
 // update time
 var newTime   = new Date().getTime() / 1000,
-deltaTime = newTime - (time || newTime);
+deltaTime = newTime - (time || newTime); 
 time = newTime;
 // clear canvas
 context.clearRect(0, 0, canvas.width, canvas.height);
